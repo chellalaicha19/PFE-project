@@ -1,0 +1,23 @@
+{
+  "total_images": 20000,
+  "class_counts": {
+    "No_Anomaly": 10000,
+    "Hotspot": 4600,
+    "Offline_Cold_Module": 3726,
+    "String_Interconnect_Failure": 1674
+  },
+  "mapping_used": {
+    "No-Anomaly": "No_Anomaly",
+    "Cell": "Hotspot",
+    "Cell-Multi": "Hotspot",
+    "Cracking": "Hotspot",
+    "Hot-Spot": "Hotspot",
+    "Hot-Spot-Multi": "Hotspot",
+    "Diode": "String_Interconnect_Failure",
+    "Diode-Multi": "String_Interconnect_Failure",
+    "Offline-Module": "Offline_Cold_Module",
+    "Shadowing": "Offline_Cold_Module",
+    "Vegetation": "Offline_Cold_Module",
+    "Soiling": "Offline_Cold_Module"
+  }
+}

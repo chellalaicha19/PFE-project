@@ -1,0 +1,82 @@
+# environment
+venv/
+pi5_code/pi5/venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# datasets (too large / not code)
+thermal/
+rgb/Detect_solar_dust/
+rgb/Faulty_solar_panel/
+rgb/Solar_Panel_Defect_2.v4i.yolov8/
+rgb/solar_panel_fault_detection.v1i.yolov8/
+rgb/Panel_Detection.yolov8_*/
+rgb/yolo_panel_*/
+rgb/Panel_Detection.v2i.yolov8-obb/
+rgb/*.zip
+prepared/Panel_Detection.v2i.yolov8-obb/
+prepared/Panel_Detection.v2i.yolov8-obb.zip
+prepared/unified_dataset_rgb_clahe/
+prepared/thermal_data_mlx/
+prepared/test/
+unified_dataset/
+panel_detection/
+
+# model weights (large binaries)
+*.pt
+*.h5
+*.keras
+*.tflite
+*.pth
+*.pb
+*.onnx
+*.engine
+*.weights
+*.backup
+
+# outputs and large files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.png
+*.jpg
+*.jpeg
+*.mp4
+*.avi
+*.mov
+*.txt
+*.csv
+
+# OS junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# logs
+*.log
+logs/
+
+calc.py
+bars.py
+final_check.py
+fix_yolo_single_class.py
+generate_figures.py
+view_hotspot.py
+pi5_code/pi5/.local/
+pi5_code/pi5/.config/
+pi5_code/pi5/.cache/
+pi5_code/pi5/real_test/testing/
+pi5_code/pi5/no/
+pi5_code/pi5/panel_detection2/best_ncnn_model/
+pi5_code/pi5/panel_detection2/best_ncnn_model_320/
+pi5_code/pi5/panel_detection2/best_ncnn_model_416/
+test_rgb+thermal/
