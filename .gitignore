@@ -20,14 +20,11 @@ class_distribution_analysis.png
 # Folders to exclude
 clahe_comparison/
 multiclassification_dashboard/
-panel_detection/
 pi5_code/
 preparing_datasets/
-rgb/
 rgb_binary_class/
 rgb_multicalssification/
 test_rgb+thermal/
-thermal/
 thermal_binary_class/
 thermal_multiclassification/
 unified_dataset/
