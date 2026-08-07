@@ -15,7 +15,7 @@ The system inspects photovoltaic panels from a UAV, using synchronized RGB and t
 The system runs as a cascaded, multi-stage pipeline:
 
 1. **Panel detection** — YOLO11n-OBB (oriented bounding boxes), exported to NCNN INT8 (5.17 MB, mAP50 0.860, 7.6 FPS on-device).
-2. **Thermal two-stage cascade** :
+2. **RGB two-stage cascade** :
    - *RGB binary triage* — MobileNetV3-Small (ONNX Runtime, FP16) flags anomaly vs. no-anomaly per detected panel (~95.9% accuracy, ~96.6% anomaly recall, ~27 ms/inference).
    - *RGB multiclass* — EfficientNet-B1 (TFLite, float16) classifies flagged panels into 5 classes: No Anomaly, Soiling/Pollution, Shadowing/Vegetation, Burn/Discoloration, Structural Damage (95.7% test accuracy).
 3. **Thermal two-stage cascade**:
@@ -54,14 +54,14 @@ The system runs as a cascaded, multi-stage pipeline:
 - **RGB camera**: `/dev/video2`
 - **Thermal camera**: TOPDON TC002C Duo
 - **GPS**: u-blox NEO-7M, UBX binary protocol, SBAS/EGNOS enabled, airborne dynamic model, on `/dev/ttyAMA0`
-- **Link**: H16 remote control network, directional WiFi for image/telemetry transfer
+- **Link**: H16 remote control network
 
 
 ## Datasets
 
-- **RGB**: unified 5-class taxonomy built from four public sources (Detect_solar_dust, Faulty_solar_panel, Solar_Panel_Defect_2, solar_panel_fault_detection), with CLAHE preprocessing and augmentation.
+- **RGB**: unified 4-class taxonomy built from four public sources (Detect_solar_dust, Faulty_solar_panel, Solar_Panel_Defect_2, solar_panel_fault_detection), with CLAHE preprocessing and augmentation.
 - **Thermal**: merged from PVF-10 (InfraredSolarModules) and PVMD, with hue-jitter augmentation for palette invariance.
-- **Panel detection**: 600 manually annotated images (oriented bounding boxes).
+- **Panel detection**: 1000 manually annotated images (oriented bounding boxes).
 
 ## Results at a glance
 
